@@ -1,0 +1,31 @@
+class Solution {
+    static int searchfromstart(int[] nums,int target)
+    {
+        for(int i=0;i<nums.length;i++)
+        {
+            if(nums[i]==target)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+    public int searchfromend(int[] nums,int target)
+    {
+        for(int i=nums.length-1;i>=0;i--)
+        {
+          if(nums[i]==target)
+          {
+            return i;
+          }
+        }
+        return -1;
+    }
+    public int[] searchRange(int[] nums, int target) {
+        int x=searchfromstart(nums,target);
+        int y=searchfromend(nums,target);
+        int[] ans={x,y};
+        return ans;
+      
+    }
+}
